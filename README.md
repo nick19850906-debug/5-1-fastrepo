@@ -30,3 +30,8 @@ python -m unittest discover -s tests -t .
 - **LFU로 바꾼다면**: 키별 접근 횟수 + 빈도별 리스트(freq→리스트)로 교체, 최소 빈도 리스트 tail 제거.
 - **10만 건 이상**: 병목은 리스트·해시 체인 길이 → 해시 품질/리사이즈로 완화. 메모리는 Entry/노드 오버헤드가 크다(문서상 used_memory는 이를 제외).
 - **오버헤드 포함 모델**: 노드·버킷·포인터 크기를 합산해야 하며, 비교 시 동일 기준(키+값만 vs 전체)으로 맞춰야 공정.
+
+## 문서
+- [docs/CONCEPTS.md](docs/CONCEPTS.md): 기초 개념부터 상세·쉬운 설명
+- [docs/evaluation-script.md](docs/evaluation-script.md): 발표 대본
+- `python scripts/evaluate-mission.py`: 자동 검증

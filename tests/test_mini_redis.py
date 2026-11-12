@@ -1,4 +1,4 @@
-﻿import unittest
+import unittest
 
 from mini_redis.cli import execute
 from mini_redis.hashmap import HashMap
