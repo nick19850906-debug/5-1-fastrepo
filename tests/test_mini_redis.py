@@ -55,7 +55,7 @@ class CommandTests(unittest.TestCase):
 
     def test_lru_get_refresh(self):
         s = Store()
-        run(s, "CONFIG SET maxmemory 30", "SET a 1234567", "SET b 1234567", "GET a", "SET c 1234567")
+        run(s, "CONFIG SET maxmemory 20", "SET a 1234567", "SET b 1234567", "GET a", "SET c 1234567")
         self.assertEqual(run(s, "EXISTS a", "EXISTS b"), ["(integer) 1", "(integer) 0"])
 
     def test_oom(self):
@@ -92,3 +92,4 @@ class CommandTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
